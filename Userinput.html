@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Input Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Input Form</h1>
+    <form id="dataForm" action="{{url_for'(/predict)'}}"  method="POST">
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+        <div class="form-group">
+            <label for="avg_glucose_level">Average Glucose Level:</label>
+            <input type="number" id="avg_glucose_level" name="avg_glucose_level" required>
+        </div>
+        <div class="form-group">
+            <label for="bmi">BMI:</label>
+            <input type="number" id="bmi" name="bmi" step="0.01" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="hypertension_1">hypertension_1:</label>
+            <select id="hypertension_1" name="hypertension_1" required>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="heart_disease_1">heart_disease_1:</label>
+            <select id="heart_disease_1" name="heart_disease_1" required>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="ever_married_Yes">ever_married_Yes:</label>
+            <select id="ever_married_Yes" name="ever_married_Yes" required>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="work_type_Never_worked ">work_type_Never_worked :</label>
+            <select id="work_type_Never_worked " name="work_type_Never_worked " required>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="work_type_Private">work_type_Private:</label>
+            <select id="work_type_Private" name="work_type_Private" required>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="work_type_Self-employed">work_type_Self-employed:</label>
+            <select id="work_type_Self-employed" name="work_type_Self-employed" required>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for=" work_type_children "> work_type_children :</label>
+            <select id=" work_type_children " name=" work_type_children " required>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Residence_type_Urban">Residence_type_Urban:</label>
+            <select id="Residence_type_Urban" name="Residence_type_Urban" required>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="smoking_status_formerly smoked">smoking_status_formerly smoked:</label>
+            <select id="smoking_status_formerly smoked" name="smoking_status_formerly smoked" required>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="smoking_status_never smoked">smoking_status_never smoked:</label>
+            <select id="smoking_status_never smoked" name="smoking_status_never smoked" required>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="smoking_status_smokes">smoking_status_smokes:</label>
+            <select id="smoking_status_smokes" name="smoking_status_smokes" required>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+        </div>
+        <!-- Add more form fields for other features as needed -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
